@@ -1,0 +1,12 @@
+{
+  "cmake.configureOnOpen": false,
+  "files.associations": {
+    "*.cpp": "cpp",
+    "*.hpp": "cpp",
+    "*.h": "cpp"
+  },
+  "editor.formatOnSave": true,
+  "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json"
+}
+

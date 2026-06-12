@@ -1,0 +1,67 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "colcon: build (this package)",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "source /opt/ros/lyrical/setup.bash && cd ${workspaceFolder}/../../ && colcon build --packages-select hello_world --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "colcon: build (all packages)",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "source /opt/ros/lyrical/setup.bash && cd ${workspaceFolder}/../../ && colcon build --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "colcon: clean",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd ${workspaceFolder}/../../ && rm -rf build/ install/ log/"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "ros2: run hello_world_node",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "source /opt/ros/lyrical/setup.bash && source ${workspaceFolder}/../../install/setup.bash && ros2 run hello_world hello_world_node"
+      ],
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    }
+  ]
+}
+
