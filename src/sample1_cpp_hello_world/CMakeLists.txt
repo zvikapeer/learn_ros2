@@ -17,8 +17,8 @@ find_package(rclcpp REQUIRED)
 # Build the node executable
 add_executable(hello_world_node src/hello_world_node.cpp)
 
-ament_target_dependencies(hello_world_node
-  rclcpp
+target_link_libraries(hello_world_node
+  rclcpp::rclcpp
 )
 
 # Install the executable
